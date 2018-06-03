@@ -9,5 +9,9 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relations, source: :follower
   has_many :following_relation, foreign_key: "follower_id", class_name: "Follow"
   has_many :followings, through: :following_relation, source: :followed
+<<<<<<< HEAD
   mount_uploader :avatar, AvatarUploader
+=======
+  
+>>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
 end

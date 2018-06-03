@@ -1,3 +1,4 @@
+<<<<<<< HEAD
          ___        ______     ____ _                 _  ___  
         / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
        / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
@@ -13,3 +14,6 @@ or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
 
 Happy coding!
 
+=======
+# makesns
+>>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
