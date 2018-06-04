@@ -7,20 +7,12 @@ class CommentsController < ApplicationController
                                   post_id: params[:post_id],
                                   user_id: current_user.id)
         new_comment.save
-<<<<<<< HEAD
         redirect_back(fallback_location: root_path)
-=======
-        redirect_to root_path
->>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
     end
     
     def destroy
         @comment.destroy
-<<<<<<< HEAD
         redirect_back(fallback_location: root_path)
-=======
-        redirect_to root_path
->>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
     end
     
     private

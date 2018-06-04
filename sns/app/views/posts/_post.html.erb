@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="card post">
     <div class="card-content">
       <% if post.user.avatar %>
@@ -32,34 +31,6 @@
     
 
     <div class="card-action">
-=======
-<div class="card">
-    <div class="card-content">
-        <span class="card-title"><%= post.user.name %></span>
-        <span><%= post.created_at %></span>
-       <% if user_signed_in? && current_user != post.user %>
-        <% if current_user.followings.include?(post.user) %>
-          <%= form_tag follow_path(post.user.id), method: :delete, class: "right" do %>
-            <button class="btn">팔로우 취소</button>
-          <% end %>
-        <% else %>
-          <%= form_tag follows_path, class: "right" do %>
-            <input type="hidden" name="followed_id" value="<%= post.user.id %>" />
-            <button class="btn">팔로우</button>
-          <% end %>
-        <% end %>
-       <% end %>
-       <div class="card-image">
-         <% if post.image.url %>
-           <img src="<%= post.image.url %>">
-         <% end %>
-       </div>
-       <p class="pre-line"><%= post.content %></p>
-    </div>
-
-    <div class="card-action">
-        <a href="#">좋아요</a>
->>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
         <% if current_user.id == post.user_id %>
             <%= link_to "삭제", post_path(post), method: "delete", class: "right" %>
             <%= link_to "수정", edit_post_path(post), class: "right" %>
