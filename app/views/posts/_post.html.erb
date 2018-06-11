@@ -26,7 +26,6 @@
     </div>
 
     <div class="card-action">
-        <a href="#">좋아요</a>
         <% if current_user.id == post.user_id %>
             <%= link_to "삭제", post_path(post), method: "delete", class: "right" %>
             <%= link_to "수정", edit_post_path(post), class: "right" %>
