@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <%= csrf_meta_tags %>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">&nbsp&nbsp&nbsp&nbspGallery</a>
+        <a href="#" data-target="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+            <li><a href="/posts">Timeline</a></li>
+            <li><a href="/posts/mypage">MyPage</a></li>
+            <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></li>
+            <li><%= current_user.name %>&nbsp&nbsp&nbsp&nbsp</li>
+          <% else %>
+            
+            <li><a href="/users/sign_in">Sign in</a></li>
+            <li><a href="/users/sign_up">Sign up</a></li>
+            <li><a href="/posts/notuser">Timeline(for NoUser)&nbsp&nbsp&nbsp&nbsp</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="#">Sign in</a></li>
+      <li><a href="#">Sign up</a></li>
+    </ul>
+    <%= yield %>
+  </body>
+</html>
