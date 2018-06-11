@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "sns",
+=======
+  "name": "Gallery",
+>>>>>>> a2706333aa688a58464aa609b691382ce51108b2
   "private": true,
   "dependencies": {}
 }
