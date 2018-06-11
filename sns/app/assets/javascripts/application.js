@@ -15,15 +15,12 @@
 //= require materialize-sprockets
 //= require_tree .
 
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);
   });
 
 
-=======
->>>>>>> af4017824b688259477c27d0c7e3d0a0d4b38209
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });

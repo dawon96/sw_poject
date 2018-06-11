@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'posts/notuser'
   get 'posts/folw'
   get 'posts/mypage'
   root 'posts#index'

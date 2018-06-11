@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  
+  before_action :authenticate_user!, except: [:notuser]
   before_action :check_ownership, only: [:edit, :update, :destroy]
   
   
@@ -11,12 +12,16 @@ class PostsController < ApplicationController
   def new
   end
   
+  def notuser
+    @nouserposts = Post.all.order('created_at desc')
+  end
+  
   def folw
     @fposts = Post.where(user_id: current_user.followings.ids).order('created_at desc')
   end
   
   def mypage
-    @mposts = Post.where(user_id: current_user.id).order('created_at desc')
+    @mposts = Post.where(user_id: [current_user.id] + current_user.followings.ids).order('created_at desc')
     @mposts_count = current_user.posts.length
   end
   
