@@ -5,7 +5,7 @@
         <% end %>
         <span class="card-title"><%= post.user.name %></span>
         <span><%= post.created_at %></span>
-       <% if user_signed_in? && current_user != post.user %>
+        <% if user_signed_in? && current_user != post.user %>
         <% if current_user.followings.include?(post.user) %>
           <%= form_tag follow_path(post.user.id), method: :delete, class: "right" do %>
             <button class="btn">팔로우 취소</button>
@@ -13,7 +13,7 @@
         <% else %>
           <%= form_tag follows_path, class: "right" do %>
             <input type="hidden" name="followed_id" value="<%= post.user.id %>" />
-            <button class="btn">팔로우</button>
+            <button class="btn" style="background-color: ##ffab00" >팔로우</button>
           <% end %>
         <% end %>
        <% end %>
