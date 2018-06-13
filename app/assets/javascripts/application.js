@@ -12,8 +12,8 @@
 //
 //= require rails-ujs
 //= require activestorage
-<<<<<<< HEAD
 //= require materialize-sprockets
+//= require bootstrap-sprockets
 //= require_tree .
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,7 +25,3 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });
-=======
-//= require turbolinks
-//= require_tree .
->>>>>>> a2706333aa688a58464aa609b691382ce51108b2
