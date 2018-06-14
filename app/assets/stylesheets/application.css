@@ -19,7 +19,6 @@
     background-color: #ffccbc;
     color: #000000;
 }
-
 nav .brand-logo {
     position: absolute;
     color: #6d4c41;
@@ -27,6 +26,7 @@ nav .brand-logo {
     font-size: 2.1rem;
     padding: 0;
 }
+
 
 nav ul a {
     transition: background-color .3s;
@@ -50,6 +50,7 @@ label {
     font-size: 0.8rem;
     color: #bcaaa4;
 }
+
 
 a {
     text-decoration: none;

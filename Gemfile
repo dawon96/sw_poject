@@ -7,7 +7,7 @@ gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rails-ujs'
-
+gem 'kaminari'
 gem 'devise', git: 'https://github.com/plataformatec/devise'
 
 
