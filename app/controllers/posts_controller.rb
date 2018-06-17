@@ -13,20 +13,20 @@ class PostsController < ApplicationController
   end
   
   def notuser
-    @nouserposts = Post.all.order('created_at desc')
+    @nouserposts = Post.all.order('created_at desc').page params[:page]
   end
   
   def folw
-    @fposts = Post.where(user_id: current_user.followings.ids).order('created_at desc')
+    @fposts = Post.where(user_id: current_user.followings.ids).order('created_at desc').page params[:page]
   end
   
   def mypage
-    @mposts = Post.where(user_id: [current_user.id]).order('created_at desc')
+    @mposts = Post.where(user_id: [current_user.id]).order('created_at desc').page params[:page]
     @mposts_count = current_user.posts.length
   end
   
   def followings
-    @fposts = Post.where(user_id: current_user.followings.ids).order('created_at desc')
+    @fposts = Post.where(user_id: current_user.followings.ids).order('created_at desc').page params[:page]
   end
   
   def create

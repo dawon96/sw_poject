@@ -4,6 +4,7 @@
             <% @fposts.each do |post| %>
                 <%= render partial: "post", object: post %>
             <% end %>
+            <%= paginate @fposts %>
         </div>
     </div>
 </div>

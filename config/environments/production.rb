@@ -61,11 +61,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-<<<<<<< HEAD
   # config.active_job.queue_name_prefix = "sns_#{Rails.env}"
-=======
-  # config.active_job.queue_name_prefix = "Gallery_#{Rails.env}"
->>>>>>> a2706333aa688a58464aa609b691382ce51108b2
 
   config.action_mailer.perform_caching = false
 

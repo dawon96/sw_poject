@@ -5,6 +5,9 @@
                     <%= render partial: "post", object: post %>
                 <% end %>
                 <%= paginate @posts %>
+                <div class="fixed-action-btn">
++                <a class="btn-floating btn-large waves-effect waves-light red" href="/posts/new"><i class="material-icons">add</i></a>
++               </div>
         </div>
     </div>
 </div>
