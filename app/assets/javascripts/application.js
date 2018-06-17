@@ -16,6 +16,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);
