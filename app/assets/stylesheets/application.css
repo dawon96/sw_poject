@@ -30,7 +30,7 @@ nav .brand-logo {
     color: #ffffff;
     display: inline-block;
     font-size: 2.1rem;
-    padding: 0;
+    padding: 0 20px;
 }
 
 nav {
@@ -43,6 +43,17 @@ nav {
 
 .pagination li.active {
     background-color: #ec407a;
+    
+    
+    
+}
+
+
+.page-item .page-link {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #ec407a;
+    border-color: #ec407a;
 }
 
 nav ul a {
@@ -50,9 +61,11 @@ nav ul a {
     font-size: 1rem;
     color: #ffffff;
     display: block;
-    padding: 0 15px;
+    padding: 0 10px;
     cursor: pointer;
 }
+
+
 
 h2 {
     color: #6d4c41;
@@ -73,9 +86,18 @@ a {
     text-decoration: none;
 }
 
+nav ul li {
+    transition: background-color .3s;
+    float: left;
+    padding: 0 10px;
+}
 
-
-
+nav ul li .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #01579b;
+    border-color: #01579b;
+}
 
 
 
@@ -106,6 +128,8 @@ h2 {
   margin: 40px 8px 10px 8px; 
   color: #cccccc;
 }
+
+
 
 
 
@@ -184,7 +208,9 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #0288d1;
+  background-color:#bbdefb;
+  color: #000;
+  font-size: 13pt;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -340,3 +366,15 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+input[type=text] {
+
+    text-align: left;
+}
+
+em {
+    font-style: italic;
+    color: #bcaaa4;
+}
+
+

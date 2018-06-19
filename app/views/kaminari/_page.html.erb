@@ -1,6 +1,13 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 <% if page.current? %>
-  <li class="page-item active">
-    <%= content_tag :a, page, data: { remote: remote }, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)), class: 'page-link' %>
+  <li class="page-item active" >
+    <div>
+    <%= content_tag :a, page, data: { remote: remote }, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)), class: 'page-link', style: 'color: #000;background-color: #fce4ec ;border-color: #fce4ec;border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;border-top-left-radius: .25rem;border-bottom-left-radius: .25rem' %>
+    </div>
   </li>
 <% else %>
   <li class="page-item">

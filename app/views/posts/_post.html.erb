@@ -1,52 +1,60 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <div class="card">
     <div class="card-content">
-        <span class="card-title">
+        <div>
+        <span class="card-title" style="font-family: 나눔; font-weight: 540">
             <% if post.user.avatar %>
                 <img class="circle thumbnail" src="<%= post.user.avatar.thumb.url %>">
             <% end %><%= post.user.name %></span>
-        <span><%= post.created_at %></span>
+        <span style="font-family: 나눔"><%= post.created_at %></span>
         <% if user_signed_in? && current_user != post.user %>
         <% if current_user.followings.include?(post.user) %>
           <%= form_tag follow_path(post.user.id), method: :delete, class: "right" do %>
-            <button class="btn">팔로우 취소</button>
+            <button style="font-family: 나눔;border-top-right-radius: 1rem;border-bottom-right-radius: 1rem;border-top-left-radius: 1rem;border-bottom-left-radius: 1rem">팔로우 취소</button>
           <% end %>
         <% else %>
           <%= form_tag follows_path, class: "right" do %>
             <input type="hidden" name="followed_id" value="<%= post.user.id %>" />
-            <button class="btn" style="background-color: ##ffab00" >팔로우</button>
+            <button style="font-family: 나눔;border-top-right-radius: 1rem;border-bottom-right-radius: 1rem;border-top-left-radius: 1rem;border-bottom-left-radius: 1rem">팔로우</button>
           <% end %>
         <% end %>
        <% end %>
+       </div>
+       
        <div class="card-image">
          <% if post.image.url %>
-           <img src="<%= post.image.url %>">
+           <center><img src="<%= post.image.url %>"  style="width: 60%; height: auto;margin-top: 20pt"></center>
          <% end %>
        </div><br>
-       <p class="pre-line"><%= post.content %></p>
+       <p class="pre-line" style="font-size: 14pt; margin-top: 20pt; font-family: 나눔"><%= post.content %></p>
     </div>
 
-    <div class="card-action">
+    <div class="card-action" style="font-family: 나눔">
         <% if current_user.id == post.user_id %>
             <%= link_to "삭제", post_path(post), method: "delete", class: "right" %>
             <%= link_to "수정", edit_post_path(post), class: "right" %>
         <% end %>
         <%= form_tag post_comments_path(post) do %>
-          <div class="input-field">
+          <div class="input-field" style="font-family: 나눔">
             <%= text_area_tag :content, nil, class: "materialize-textarea", placeholder: "댓글을 작성해주세요.", required: true %>
           </div>
-          <div class="input-field">
-            <%= button_tag "댓글 쓰기", class: "btn" %>
+          <div class="input-field" style="font-family: 나눔">
+            <%= button_tag "댓글 쓰기" %>
           </div>
         <% end %>
         <% if post.comments.present? %>
           <ul class="collection">
           <% post.comments.each do |comment| %>
             <li class="collection-item">
-              <span class="card-title"><%= comment.user.name %></span>
-              <span class="right"><%= comment.created_at %></span>
-              <p class="pre-line"><%= comment.content %></p>
+              <span class="card-title" style="font-size: 15pt; font-family: 나눔"><%= comment.user.name %></span>
+              <span class="right" style="font-family: 나눔"><%= comment.created_at %></span>
+              <p class="pre-line" style="padding: 10px; font-family: 나눔"><%= comment.content %></p>
               <% if comment.user.id == current_user.id %>
-                <div><%= link_to "삭제", post_comment_path(post, comment), method: "delete" %></div>
+                <div style="font-family: 나눔"><%= link_to "삭제", post_comment_path(post, comment), method: "delete" %></div>
               <% end %>
             </li>
           <% end %>
@@ -54,4 +62,5 @@
         <% end %>
     </div>
 </div>
+
 
