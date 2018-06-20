@@ -67,6 +67,16 @@ Backtrace:
 white-space : pre-line;
 }
 
+.card-content .cc {
+		border-width: 1.5px;
+		border-color: #e1bee7;
+		border-style: dotted;
+		padding-right: 5px;
+		padding-left: 50px;
+		padding-top: 5px;
+		padding-bottom: 20px;
+}
+
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
     color: #ec407a;
@@ -123,3 +133,15 @@ button:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
+
+
+
+
+
+
+
+
+
+
+
+

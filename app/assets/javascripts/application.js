@@ -15,15 +15,6 @@
 //= require materialize-sprockets
 //= require bootstrap-sprockets
 //= require_tree .
+//= require jquery.min
+//= require materialize.min
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-
-
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });

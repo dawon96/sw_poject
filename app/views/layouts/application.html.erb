@@ -1,6 +1,5 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
@@ -14,14 +13,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <%=javascript_include_tag 'application',media: 'all'  %>
   </head>
 
   <body>
     <nav>
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo" style="font-weight: 600" >Gallery</a>
-        <a href="#" data-target="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
+
+      <div class="nav-wrapper" style="padding: 0 20px;">
+        <a href="/"  style="font-size: 25pt;font-weight: 600" >Gallery</a>
+        
+        <ul class="right">
           <% if user_signed_in? %>
             <li><a href="/posts" >Timeline</a></li>
             <li><a href="/posts/mypage" >MyPage</a></li>
@@ -37,11 +39,6 @@
       </div>
     </nav>
 
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="#">Sign in</a></li>
-      <li><a href="#">Sign up</a></li>
-    </ul>
     <%= yield %>
   </body>
 </html>
