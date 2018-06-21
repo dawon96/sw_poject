@@ -69,12 +69,12 @@ white-space : pre-line;
 
 .card-content .cc {
 		border-width: 1.5px;
-		border-color: #e1bee7;
-		border-style: dotted;
+		border-color: #fbe9e7;
+		border-style: outset;
 		padding-right: 5px;
 		padding-left: 50px;
 		padding-top: 5px;
-		padding-bottom: 20px;
+		padding-bottom: 25px;
 }
 
 
